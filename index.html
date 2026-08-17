@@ -49,7 +49,26 @@
         /* --- Header & Hero Section --- */
         header {
             text-align: center;
-            padding: 4rem 1rem 2rem 1rem;
+            padding: 3rem 1rem 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Logo Styling */
+        .channel-logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 25px rgba(14, 165, 233, 0.4);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .channel-logo:hover {
+            transform: scale(1.05);
         }
 
         .hero-badge {
@@ -60,22 +79,23 @@
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             border: 1px solid rgba(14, 165, 233, 0.3);
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 900;
             margin-bottom: 1rem;
             line-height: 1.3;
             background: linear-gradient(to left, #38bdf8, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            max-width: 800px;
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto 2.5rem auto;
@@ -120,11 +140,12 @@
         /* --- Features Section --- */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             padding: 3rem 1.5rem;
             max-width: 1100px;
             margin: 0 auto;
+            width: 100%;
             flex: 1;
         }
 
@@ -138,7 +159,7 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
             border-color: rgba(14, 165, 233, 0.3);
         }
@@ -150,14 +171,15 @@
         }
 
         .feature-card h2 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
             font-weight: 700;
         }
 
         .feature-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         /* --- Footer --- */
@@ -170,20 +192,34 @@
             font-size: 0.9rem;
         }
 
-        /* --- Responsive Adjustments --- */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
+        /* --- Mobile Responsive Fixes --- */
+        @media (max-width: 850px) {
+            .features {
+                grid-template-columns: 1fr; /* باکس‌ها را دقیقاً زیر هم ردیف می‌کند */
+                gap: 1.25rem;
+                padding: 2rem 1.25rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header { padding-top: 2rem; }
+            .channel-logo { width: 110px; height: 110px; }
+            h1 { font-size: 1.7rem; }
             .hero-badge { font-size: 0.8rem; }
-            .subtitle { font-size: 1rem; padding: 0 1rem; }
+            .subtitle { font-size: 0.95rem; padding: 0 0.5rem; }
+            .cta-btn { width: 100%; max-width: 320px; font-size: 1.1rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="hero-badge">🎵 رسانه تخصصی موسیقی ترکیه</div>
-        <h1>مرجع دانلود جدیدترین آهنگ‌های ترکی استانبولی</h1>
-        <p class="subtitle">به دنیای بی‌نظیر موسیقی ترکی خوش آمدید! در کانال تلگرام TRTopMusic، بروزترین هیت‌های ترکیه، پلی‌لیست‌های اختصاصی و ریمیکس‌های جذاب را با بالاترین کیفیت دانلود کنید و از شنیدن آن‌ها لذت ببرید.</p>
+        <!-- لوگوی گرد کانال -->
+        <img src="https://cdn4.telesco.pe/file/NzNYGdBbmSYn6zheVE1ybE7LI6E_zoLQ0T4oBBMnfDBTpSMC1ukeYsUFBkAyXup2l8bJ3S5Z3-PygaGbKXYZbjaKVzXZb7ivvR6PPy6bBKDWX7-nAsojTm_5W17rvtQ9-Y_-bhCa-223nlFVJdAv6ZkKLelU9KWRJKpoycr_fwQw3x4mvyLGVryHxB_5hHxhfbgPqZs2zeYLsJhQBzIAiYvEs-79jZCoT-Iz4t7G-fmLyLcxXwEekY6W_fdP-kTPfanCriffu4gHk59031To_nX8GluT_58QvZsobON4Zhpv-NzRiobup81kXsp2P9wybzIqIDFasrHKeWdg5CZn6Q.jpg" alt="لوگو TRTopMusic" class="channel-logo">
+        
+
+        <h1>کانال موزیک ترکی</h1>
+        <p class="subtitle">مرجع دانلود جدیدترین و بهترین آهنگ‌های ترکی استانبولی در سبک‌های مختلف، با به‌روزرسانی مداوم برای علاقه‌مندان به موسیقی ترکیه</p>
         
         <a href="https://t.me/trtopmusic" class="cta-btn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24">
@@ -196,25 +232,27 @@
     <main class="features">
         <article class="feature-card">
             <div class="feature-icon">🎧</div>
-            <h2>بالاترین کیفیت پخش (320kbps)</h2>
-            <p>تمامی آهنگ‌ها، پادکست‌ها و آلبوم‌های منتشر شده در کانال با بهترین کیفیت ممکن (۳۲۰ و Flac) در اختیار شما قرار می‌گیرد تا جزئیات موسیقی را با تمام وجود حس کنید.</p>
+            <h2>کیفیت</h2>
+            <p>تمامی آهنگ‌ها و آلبوم‌های منتشرشده در کانال با بالاترین کیفیت ممکن در اختیار شما قرار می‌گیرند تا موسیقی را با جزئیات و کیفیتی مطلوب تجربه کنید.</p>
         </article>
 
         <article class="feature-card">
             <div class="feature-icon">⚡</div>
-            <h2>آپدیت روزانه و سریع</h2>
-            <p>ما پیش از همه، جدیدترین آهنگ‌های منتشر شده از خوانندگان مطرح ترکیه را در کانال قرار می‌دهیم. همیشه یک قدم از بقیه جلوتر باشید و آهنگ‌های ترند را بشنوید.</p>
+            <h2>به‌روزرسانی</h2>
+            <p>جدیدترین آهنگ‌های خوانندگان محبوب ترکیه را در سریع‌ترین زمان ممکن در کانال قرار می‌دهیم. همیشه به تازه‌ترین آثار پرطرفدار موسیقی ترکیه دسترسی داشته باشید.</p>
         </article>
 
         <article class="feature-card">
             <div class="feature-icon">📁</div>
-            <h2>آرشیو کامل و دسته‌بندی شده</h2>
-            <p>به راحتی با هشتگ‌های اختصاصی، نام خواننده یا سبک مورد نظرتان (پاپ، راک، رپ، دیسکو) را در کانال جستجو کنید و به دنیایی از موزیک‌های خاطره‌انگیز و جدید دسترسی پیدا کنید.</p>
+            <h2>تعامل</h2>
+            <p> 
+در گروه موزیک ترکی با دیگر علاقه‌مندان در ارتباط باشید، درخواست آهنگ بدهید، سؤال بپرسید و اخبار و مطالب مرتبط با موسیقی ترکیه را به اشتراک بگذارید.
+</p>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2026 تمامی حقوق برای کانال <a href="https://t.me/trtopmusic" style="color: var(--accent-color); text-decoration: none;">TRTopMusic</a> محفوظ است.</p>
+        <p>&copy; 2026 تمامی حقوق برای کانال <a href="https://t.me/trtopmusic" style="color: var(--accent-color); text-decoration: none;">موزیک ترکی</a> محفوظ است.</p>
     </footer>
 
 </body>
