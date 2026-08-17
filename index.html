@@ -7,8 +7,7 @@
 
     <title>کانال موزیک ترکی | دانلود آهنگ های جدید ترکی استانبولی</title>
 
-    <meta name="description"
-          content="کانال موزیک ترکی؛ معرفی و انتشار جدیدترین آهنگ های ترکی استانبولی، موزیک ترکی و آهنگ های جدید ترکی. برای دنبال کردن جدیدترین موزیک های ترکی به کانال ما در تلگرام بپیوندید.">
+    <meta name="description" content="کانال تلگرام موزیک ترکی، یک منبع بی نظیر برای دسترسی به آهنگ‌های ترکی استانبولی جدید است. این کانال با ارائه آهنگ‌های متنوع در سبک‌های مختلف، از پاپ و راک تا موسیقی محلی و سنتی، به علاقه‌مندان موسیقی ترکی خدمات می‌دهد.">
 
     <meta name="robots" content="index, follow">
 
@@ -18,21 +17,19 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://trtopmusic.github.io/">
-    <meta property="og:title" content="کانال موزیک ترکی | دانلود آهنگ های جدید ترکی استانبولی">
-    <meta property="og:description"
-          content="جدیدترین آهنگ های ترکی استانبولی و موزیک ترکی را در کانال موزیک ترکی دنبال کنید.">
-    <meta property="og:site_name" content="موزیک ترکی">
     <meta property="og:locale" content="fa_IR">
+    <meta property="og:site_name" content="موزیک ترکی">
+    <meta property="og:title" content="کانال موزیک ترکی | دانلود آهنگ های جدید ترکی استانبولی">
+    <meta property="og:description" content="کانال تلگرام موزیک ترکی، یک منبع بی نظیر برای دسترسی به آهنگ‌های ترکی استانبولی جدید و آثار متنوع موسیقی ترکیه.">
+    <meta property="og:url" content="https://trtopmusic.github.io/">
 
-    <!-- Twitter / X -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="کانال موزیک ترکی | دانلود آهنگ های جدید ترکی استانبولی">
-    <meta name="twitter:description"
-          content="جدیدترین آهنگ های ترکی استانبولی و موزیک ترکی">
+    <meta name="twitter:description" content="کانال تلگرام موزیک ترکی برای دسترسی به آهنگ‌های ترکی استانبولی جدید.">
 
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎵%3C/text%3E%3C/svg%3E">
+    <!-- Theme -->
+    <meta name="theme-color" content="#09090b">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -42,11 +39,21 @@
         "name": "موزیک ترکی",
         "alternateName": "کانال موزیک ترکی",
         "url": "https://trtopmusic.github.io/",
-        "description": "کانال موزیک ترکی برای دنبال کردن جدیدترین آهنگ های ترکی استانبولی و موزیک ترکی."
+        "description": "کانال تلگرام موزیک ترکی برای دسترسی به آهنگ‌های ترکی استانبولی جدید و آثار متنوع موسیقی ترکیه."
     }
     </script>
 
     <style>
+        :root {
+            --bg: #09090b;
+            --surface: #111114;
+            --border: rgba(255,255,255,.08);
+            --text: #f5f5f5;
+            --muted: #a1a1aa;
+            --accent: #8b5cf6;
+            --accent-hover: #7c3aed;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -58,320 +65,293 @@
         }
 
         body {
+            background: var(--bg);
+            color: var(--text);
             font-family:
                 Tahoma,
                 Arial,
                 sans-serif;
-
-            background:
-                radial-gradient(
-                    circle at top right,
-                    #30204d 0,
-                    #11111a 38%,
-                    #08080d 100%
-                );
-
-            color: #ffffff;
-            line-height: 1.9;
-            min-height: 100vh;
+            line-height: 2;
+            -webkit-font-smoothing: antialiased;
         }
 
         a {
-            text-decoration: none;
             color: inherit;
+            text-decoration: none;
         }
 
         .container {
-            width: min(1100px, calc(100% - 32px));
-            margin: auto;
+            width: min(920px, calc(100% - 36px));
+            margin: 0 auto;
         }
 
         /* Header */
 
         header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
             padding: 24px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: rgba(8,8,13,0.65);
-            backdrop-filter: blur(12px);
         }
 
-        .nav {
+        .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
         }
 
-        .logo {
+        .brand {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 22px;
-            font-weight: 800;
+            font-size: 17px;
+            font-weight: 700;
         }
 
-        .logo-icon {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            background: linear-gradient(135deg, #9b5cff, #5c3bff);
-            box-shadow: 0 10px 35px rgba(116, 76, 255, 0.35);
-            font-size: 22px;
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 11px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            font-size: 18px;
         }
 
-        .telegram-small {
-            padding: 9px 17px;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.1);
+        .header-link {
+            color: var(--muted);
             font-size: 14px;
-            transition: 0.2s;
+            transition: color .2s ease;
         }
 
-        .telegram-small:hover {
-            background: rgba(255,255,255,0.13);
+        .header-link:hover {
+            color: #fff;
         }
 
         /* Hero */
 
         .hero {
-            padding: 100px 0 85px;
+            min-height: 720px;
+            display: flex;
+            align-items: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
 
-        .badge {
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            top: -330px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(139, 92, 246, .12);
+            filter: blur(100px);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .eyebrow {
             display: inline-block;
-            padding: 7px 15px;
-            margin-bottom: 25px;
-            border-radius: 999px;
-            background: rgba(155,92,255,0.12);
-            border: 1px solid rgba(155,92,255,0.3);
-            color: #cbb5ff;
+            margin-bottom: 22px;
+            color: #b8a4ff;
             font-size: 14px;
+            font-weight: 600;
         }
 
         h1 {
-            max-width: 900px;
-            margin: auto;
-            font-size: clamp(34px, 6vw, 64px);
-            line-height: 1.3;
-            font-weight: 900;
-            letter-spacing: -1px;
+            max-width: 850px;
+            margin: 0 auto;
+            font-size: clamp(32px, 6vw, 58px);
+            line-height: 1.45;
+            letter-spacing: -.8px;
+            font-weight: 800;
         }
 
-        .gradient-text {
-            background: linear-gradient(90deg, #ffffff, #c7aaff, #9b7cff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .hero-text {
+            max-width: 680px;
+            margin: 24px auto 32px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 2.1;
         }
 
-        .hero-description {
-            max-width: 720px;
-            margin: 28px auto 35px;
-            color: #b7b5c3;
-            font-size: 18px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 13px;
-        }
-
-        .btn {
+        .telegram-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 9px;
-            min-height: 50px;
-            padding: 0 25px;
-            border-radius: 13px;
+            min-height: 54px;
+            padding: 0 28px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 15px;
             font-weight: 700;
-            transition: 0.2s;
+            transition:
+                background .2s ease,
+                transform .2s ease;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #9b5cff, #6544ff);
-            box-shadow: 0 12px 35px rgba(105,70,255,0.3);
-        }
-
-        .btn-primary:hover {
+        .telegram-button:hover {
+            background: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 16px 40px rgba(105,70,255,0.4);
         }
 
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,0.12);
-            background: rgba(255,255,255,0.05);
+        /* About */
+
+        .about {
+            padding: 100px 0;
         }
 
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.09);
+        .about-content {
+            max-width: 760px;
+            margin: 0 auto;
         }
 
-        /* Sections */
-
-        section {
-            padding: 70px 0;
+        .section-label {
+            color: #a78bfa;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
+        h2 {
+            font-size: clamp(26px, 4vw, 36px);
+            line-height: 1.5;
+            margin-bottom: 25px;
         }
 
-        .section-title h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
+        .about-content p {
+            color: #b4b4bb;
+            font-size: 16px;
+            line-height: 2.2;
+            margin-bottom: 20px;
         }
 
-        .section-title p {
-            color: #9997a5;
-        }
-
-        .content-box {
-            max-width: 900px;
-            margin: auto;
-            padding: 35px;
-            border-radius: 22px;
-            background: rgba(255,255,255,0.045);
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .content-box p {
-            color: #c3c1cc;
-            margin-bottom: 18px;
-        }
-
-        .content-box p:last-child {
+        .about-content p:last-child {
             margin-bottom: 0;
         }
 
-        /* Features */
+        /* Simple info */
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+        .info {
+            padding: 0 0 100px;
         }
 
-        .feature {
-            padding: 28px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.045);
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: 0.2s;
+        .info-line {
+            max-width: 760px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
         }
 
-        .feature:hover {
-            transform: translateY(-4px);
-            background: rgba(255,255,255,0.065);
-        }
-
-        .feature-icon {
-            font-size: 30px;
+        .info-line h2 {
             margin-bottom: 15px;
         }
 
-        .feature h3 {
-            margin-bottom: 8px;
-            font-size: 19px;
-        }
-
-        .feature p {
-            color: #9997a5;
-            font-size: 14px;
+        .info-line p {
+            color: var(--muted);
+            line-height: 2.1;
         }
 
         /* CTA */
 
         .cta {
+            padding-bottom: 100px;
+        }
+
+        .cta-box {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 55px 35px;
             text-align: center;
-            padding: 70px 25px;
-            border-radius: 28px;
-            background:
-                radial-gradient(
-                    circle at center,
-                    rgba(130,80,255,0.25),
-                    rgba(255,255,255,0.035) 60%
-                );
-            border: 1px solid rgba(155,92,255,0.18);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 22px;
         }
 
-        .cta h2 {
-            font-size: clamp(28px, 5vw, 42px);
-            margin-bottom: 14px;
+        .cta-box h2 {
+            margin-bottom: 12px;
         }
 
-        .cta p {
-            color: #aaa8b5;
-            max-width: 650px;
-            margin: 0 auto 25px;
+        .cta-box p {
+            color: var(--muted);
+            margin-bottom: 25px;
         }
 
         /* Footer */
 
         footer {
-            padding: 35px 0;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid var(--border);
+            padding: 28px 0;
+            color: #71717a;
+            font-size: 12px;
             text-align: center;
-            color: #777582;
-            font-size: 13px;
         }
 
         /* Mobile */
 
-        @media (max-width: 750px) {
+        @media (max-width: 600px) {
 
             .container {
-                width: min(100% - 24px, 600px);
+                width: min(100% - 26px, 920px);
             }
 
             header {
-                padding: 17px 0;
+                padding: 18px 0;
             }
 
-            .logo {
-                font-size: 18px;
-            }
-
-            .logo-icon {
-                width: 38px;
-                height: 38px;
-            }
-
-            .telegram-small {
-                font-size: 12px;
-                padding: 7px 11px;
+            .header-link {
+                display: none;
             }
 
             .hero {
-                padding: 70px 0 55px;
+                min-height: 650px;
+                padding: 100px 0 70px;
             }
 
-            .hero-description {
-                font-size: 16px;
+            h1 {
+                font-size: 32px;
+                line-height: 1.55;
             }
 
-            section {
-                padding: 50px 0;
+            .hero-text {
+                font-size: 15px;
+                line-height: 2.15;
             }
 
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .content-box {
-                padding: 25px;
-            }
-
-            .btn {
+            .telegram-button {
                 width: 100%;
+            }
+
+            .about {
+                padding: 70px 0;
+            }
+
+            .info {
+                padding-bottom: 70px;
+            }
+
+            .cta {
+                padding-bottom: 70px;
+            }
+
+            .cta-box {
+                padding: 40px 22px;
             }
         }
     </style>
@@ -380,17 +360,18 @@
 <body>
 
 <header>
-    <div class="container nav">
+    <div class="container header-inner">
 
-        <a href="/" class="logo">
-            <span class="logo-icon">🎵</span>
+        <a href="/" class="brand" aria-label="موزیک ترکی">
+            <span class="brand-icon">♪</span>
             <span>موزیک ترکی</span>
         </a>
 
-        <!-- لینک کانال را بعداً اینجا قرار می‌دهیم -->
         <a
-            href="#telegram"
-            class="telegram-small">
+            href="https://t.me/trtopmusic"
+            class="header-link"
+            target="_blank"
+            rel="noopener noreferrer">
             کانال تلگرام
         </a>
 
@@ -400,181 +381,127 @@
 
 <main>
 
-    <!-- HERO -->
-
     <section class="hero">
 
-        <div class="container">
+        <div class="container hero-content">
 
-            <div class="badge">
-                🎵 جدیدترین موزیک های ترکی استانبولی
+            <div class="eyebrow">
+                کانال تلگرام موزیک ترکی
             </div>
 
             <h1>
-                کانال <span class="gradient-text">موزیک ترکی</span>
-                و آهنگ های جدید ترکی استانبولی
+                کانال موزیک ترکی
             </h1>
 
-            <p class="hero-description">
-                جدیدترین آهنگ های ترکی، موزیک ترکی استانبولی
-                و آثار خوانندگان محبوب ترکیه را در کانال موزیک ترکی دنبال کنید.
+            <p class="hero-text">
+                دانلود آهنگ های جدید ترکی استانبولی و دنبال کردن
+                آثار تازه موسیقی ترکیه در کانال موزیک ترکی.
             </p>
 
-            <div class="buttons">
-
-                <!-- لینک واقعی کانال را بعداً جایگزین می‌کنیم -->
-                <a
-                    href="#telegram"
-                    class="btn btn-primary">
-                    ✈️ ورود به کانال تلگرام
-                </a>
-
-                <a
-                    href="#about"
-                    class="btn btn-secondary">
-                    بیشتر درباره کانال
-                </a>
-
-            </div>
+            <a
+                href="https://t.me/trtopmusic"
+                class="telegram-button"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span>✈</span>
+                <span>ورود به کانال تلگرام</span>
+            </a>
 
         </div>
 
     </section>
 
 
-    <!-- ABOUT -->
-
-    <section id="about">
+    <section class="about">
 
         <div class="container">
 
-            <div class="section-title">
+            <div class="about-content">
 
-                <h2>کانال موزیک ترکی</h2>
-
-                <p>
-                    جدیدترین آهنگ های ترکی استانبولی را دنبال کنید
-                </p>
-
-            </div>
-
-            <div class="content-box">
-
-                <p>
-                    <strong>موزیک ترکی</strong> یک کانال برای علاقه‌مندان
-                    به موسیقی و آهنگ های ترکی استانبولی است.
-                    در این کانال می‌توانید جدیدترین موزیک های ترکی
-                    و آثار خوانندگان محبوب ترکیه را دنبال کنید.
-                </p>
-
-                <p>
-                    اگر به دنبال <strong>کانال آهنگ ترکی</strong>،
-                    موزیک ترکی جدید و آهنگ های ترکی استانبولی هستید،
-                    می‌توانید از طریق کانال تلگرام موزیک ترکی
-                    به جدیدترین انتشارها دسترسی داشته باشید.
-                </p>
-
-                <p>
-                    هدف ما فراهم کردن یک مرجع ساده و منظم برای
-                    دنبال کردن <strong>آهنگ ترکی جدید</strong>،
-                    موسیقی ترکی و خوانندگان محبوب ترکیه است.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FEATURES -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>موزیک ترکی چه چیزی ارائه می‌دهد؟</h2>
-
-                <p>
-                    همه چیز برای علاقه‌مندان به موسیقی ترکی
-                </p>
-
-            </div>
-
-            <div class="features">
-
-                <div class="feature">
-
-                    <div class="feature-icon">🎵</div>
-
-                    <h3>آهنگ های جدید ترکی</h3>
-
-                    <p>
-                        دنبال کردن جدیدترین آهنگ های ترکی
-                        و موزیک های منتشرشده از خوانندگان ترکیه.
-                    </p>
-
+                <div class="section-label">
+                    درباره کانال
                 </div>
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">🇹🇷</div>
-
-                    <h3>موسیقی ترکی استانبولی</h3>
-
-                    <p>
-                        مجموعه‌ای از موزیک ترکی استانبولی
-                        و آثار محبوب موسیقی ترکیه.
-                    </p>
-
-                </div>
-
-
-                <div class="feature">
-
-                    <div class="feature-icon">📱</div>
-
-                    <h3>کانال آهنگ ترکی در تلگرام</h3>
-
-                    <p>
-                        جدیدترین انتشارها را مستقیماً
-                        از طریق کانال تلگرام موزیک ترکی دنبال کنید.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CTA -->
-
-    <section id="telegram">
-
-        <div class="container">
-
-            <div class="cta">
 
                 <h2>
-                    دنبال آهنگ های ترکی جدید هستی؟
+                    موزیک ترکی
                 </h2>
 
                 <p>
-                    به کانال موزیک ترکی در تلگرام بپیوند
-                    و جدیدترین موزیک های ترکی استانبولی را دنبال کن.
+                    کانال تلگرام موزیک ترکی، یک منبع بی نظیر برای
+                    دسترسی به آهنگ‌های ترکی استانبولی جدید است.
+                    این کانال با ارائه آهنگ‌های متنوع در سبک‌های
+                    مختلف، از پاپ و راک تا موسیقی محلی و سنتی،
+                    به علاقه‌مندان موسیقی ترکی خدمات می‌دهد.
                 </p>
 
-                <!-- لینک واقعی کانال را اینجا قرار می‌دهیم -->
+                <p>
+                    این کانال با به‌روزرسانی مداوم خود، همیشه
+                    آخرین و برترین آثار موسیقی ترکی را در اختیار
+                    شما قرار می‌دهد.
+                </p>
+
+                <p>
+                    علاقه بسیاری از افراد به موسیقی ترکی،
+                    به‌خصوص آهنگ‌های استانبولی، باعث شده تا
+                    این کانال یکی از محبوب‌ترین کانال‌ها در بین
+                    کاربران تلگرام باشد.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="info">
+
+        <div class="container">
+
+            <div class="info-line">
+
+                <div class="section-label">
+                    موسیقی ترکی
+                </div>
+
+                <h2>
+                    آهنگ‌های ترکی استانبولی
+                </h2>
+
+                <p>
+                    برای دنبال کردن انتشارهای جدید و دسترسی
+                    مستقیم به کانال، می‌توانید از طریق تلگرام
+                    به موزیک ترکی بپیوندید.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <h2>
+                    به موزیک ترکی بپیوندید
+                </h2>
+
+                <p>
+                    جدیدترین انتشارهای کانال را در تلگرام دنبال کنید.
+                </p>
+
                 <a
-                    href="#"
-                    class="btn btn-primary">
-                    ✈️ عضویت در کانال موزیک ترکی
+                    href="https://t.me/trtopmusic"
+                    class="telegram-button"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <span>✈</span>
+                    <span>عضویت در کانال</span>
                 </a>
 
             </div>
@@ -589,9 +516,7 @@
 <footer>
 
     <div class="container">
-
-        © 2026 موزیک ترکی — تمامی حقوق محفوظ است.
-
+        © 2026 موزیک ترکی
     </div>
 
 </footer>
