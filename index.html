@@ -21,7 +21,7 @@
             --bg-card: #1e293b;
             --text-main: #f8fafc;
             --text-muted: #cbd5e1;
-            --primary-color: #0ea5e9; /* Telegram Blue/Cyan */
+            --primary-color: #0ea5e9;
             --primary-hover: #0284c7;
             --accent-color: #38bdf8;
         }
@@ -46,7 +46,6 @@
             flex-direction: column;
         }
 
-        /* --- Header & Hero Section --- */
         header {
             text-align: center;
             padding: 3rem 1rem 2rem 1rem;
@@ -55,7 +54,6 @@
             align-items: center;
         }
 
-        /* Logo Styling */
         .channel-logo {
             width: 130px;
             height: 130px;
@@ -94,14 +92,15 @@
             max-width: 800px;
         }
 
+        /* استایل زیرنویس – بدون تغییر ظاهری */
         .subtitle {
             font-size: 1.05rem;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto 2.5rem auto;
+            font-weight: 400; /* وزن معمولی، مانند قبل */
         }
 
-        /* --- Call to Action Button --- */
         .cta-btn {
             display: inline-flex;
             align-items: center;
@@ -137,7 +136,6 @@
             100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
         }
 
-        /* --- Features Section --- */
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -170,7 +168,9 @@
             color: var(--accent-color);
         }
 
-        .feature-card h2 {
+        /* استایل یکسان برای h2 و h3 داخل کارت */
+        .feature-card h2,
+        .feature-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.8rem;
             font-weight: 700;
@@ -182,7 +182,6 @@
             line-height: 1.7;
         }
 
-        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 2rem;
@@ -192,10 +191,9 @@
             font-size: 0.9rem;
         }
 
-        /* --- Mobile Responsive Fixes --- */
         @media (max-width: 850px) {
             .features {
-                grid-template-columns: 1fr; /* باکس‌ها را دقیقاً زیر هم ردیف می‌کند */
+                grid-template-columns: 1fr;
                 gap: 1.25rem;
                 padding: 2rem 1.25rem;
             }
@@ -214,12 +212,12 @@
 <body>
 
     <header>
-        <!-- لوگوی گرد کانال -->
         <img src="https://cdn4.telesco.pe/file/NzNYGdBbmSYn6zheVE1ybE7LI6E_zoLQ0T4oBBMnfDBTpSMC1ukeYsUFBkAyXup2l8bJ3S5Z3-PygaGbKXYZbjaKVzXZb7ivvR6PPy6bBKDWX7-nAsojTm_5W17rvtQ9-Y_-bhCa-223nlFVJdAv6ZkKLelU9KWRJKpoycr_fwQw3x4mvyLGVryHxB_5hHxhfbgPqZs2zeYLsJhQBzIAiYvEs-79jZCoT-Iz4t7G-fmLyLcxXwEekY6W_fdP-kTPfanCriffu4gHk59031To_nX8GluT_58QvZsobON4Zhpv-NzRiobup81kXsp2P9wybzIqIDFasrHKeWdg5CZn6Q.jpg" alt="لوگو TRTopMusic" class="channel-logo">
         
-
         <h1>کانال موزیک ترکی</h1>
-        <p class="subtitle">مرجع دانلود جدیدترین و بهترین آهنگ‌های ترکی استانبولی در سبک‌های مختلف، با بالاترین کیفیت و به‌روزرسانی سریع برای علاقه‌مندان به موسیقی ترکیه</p>
+
+        <!-- زیرنویس به h2 تبدیل شد، اما استایل کاملاً یکسان باقی ماند -->
+        <h2 class="subtitle">مرجع دانلود جدیدترین و بهترین آهنگ‌های ترکی استانبولی در سبک‌های مختلف، با بالاترین کیفیت و به‌روزرسانی سریع برای علاقه‌مندان به موسیقی ترکیه</h2>
         
         <a href="https://t.me/trtopmusic" class="cta-btn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24">
@@ -232,19 +230,19 @@
     <main class="features">
         <article class="feature-card">
             <div class="feature-icon">♬</div>
-            <h2>بالاترین کیفیت</h2>
+            <h3>بالاترین کیفیت</h3> <!-- تبدیل به h3 شد -->
             <p>تمامی آهنگ‌ها و آلبوم‌های منتشرشده در کانال با بالاترین کیفیت موجود و بدون تگ‌های تبلیغاتی در اختیار شما قرار می‌گیرد تا موسیقی را با جزئیات و کیفیتی مطلوب تجربه کنید.</p>
         </article>
 
         <article class="feature-card">
             <div class="feature-icon">⚡︎</div>
-            <h2>به‌روزرسانی سریع</h2>
+            <h3>به‌روزرسانی سریع</h3> <!-- تبدیل به h3 شد -->
             <p>جدیدترین آهنگ‌های خوانندگان محبوب ترکیه در سریع‌ترین زمان ممکن در کانال قرار می‌گیرند تا همیشه به تازه‌ترین آثار پرطرفدار موسیقی ترکیه دسترسی داشته باشید.</p>
         </article>
 
         <article class="feature-card">
             <div class="feature-icon">❤︎</div>
-            <h2>تعامل با دیگران</h2>
+            <h3>تعامل با دیگران</h3> <!-- تبدیل به h3 شد -->
             <p>از طریق گروه ما با دیگر علاقه‌مندان به موسیقی ترکیه در ارتباط باشید، موزیک درخواست بدهید، اخبار خواننده محبوبتان را جستجو کنید و آهنگ‌های مورد علاقه‌تان را با دیگران به اشتراک بگذارید.</p>
         </article>
     </main>
